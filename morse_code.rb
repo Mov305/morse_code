@@ -4,18 +4,12 @@ def decode_morse(morse_text)
                     '---' => 'o', '.--.' => 'p', '--.-' => 'q', '.-.' => 'r', '...' => 's', '-' => 't', '..-' => 'u',
                     '...-' => 'v', '.--' => 'w', '-..-' => 'x', '-.--' => 'y',
                     '--..' => 'z', ' ' => ' ' }
-
   morse_array = morse_text.split(/\s/).map { |i| morse_pattern[i] }
   text = ''
   morse_array.each do |t|
-    text = if t
-             text + t
-           else
-             "#{text} "
-           end
+    text += (t || ' ')
   end
   text.split.join(' ').upcase
 end
-
+puts(decode_morse('-- -.--   -. .- -- .'))
 puts(decode_morse('.-   -... --- -..-   ..-. ..- .-.. .-..          --- ..-.   .-. ..- -... .. . ...'))
-# => "A BOX FULL OF RUBIES"
