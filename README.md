@@ -1,67 +1,67 @@
-# Ruby Course
+![Microverse](https://img.shields.io/badge/Microverse-blueviolet) ![Ruby](https://img.shields.io/badge/-ruby-red)
 
-If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
+# [Decode a Morse code message](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/morse_code.md)
 
-## Set-up Rubocop GitHub Action
+- During our vacation at the seaside, time after time we find old bottles with parchment inside. Out of curiosity, we look into the next bottle and see that there is a message written in Morse code. Our curiosity grows even more - maybe we just found the lost treasure of the pirates! However, we are getting tired of decrypting messages manually. Fortunately, we can program in Ruby and help ourselves by automating this process.
 
-[Rubocop](https://www.rubocop.org/) is a Ruby static code analyzer (a.k.a. linter) and code formatter. It will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://rubystyle.guide/).
+## Getting Started
+To get a local copy up and running follow these simple steps.
 
-This GitHub Action is going to run [Rubocop](https://docs.rubocop.org/en/stable/) to help you find style issues.
+### Prerequisites
 
-Please do the following **steps in this order**:
+- Internet service.
+- Knowledge of Git/Terminal.
+- Ruby installed locally in your machine.
+- Visual Studio Code.
 
-1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
-    - **Remember** to use the file linked above
-    - **Remember** that `.github` folder starts with a dot.
-2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-3. When you open your first pull request you should see the result of the GitHub Actions:
+### Setup
 
-![gh actions checks](../assets/images/gh-actions-rubocop-linters-checks.png)
+- Open the terminal on your computer
+- Navigate through directories using [change directory (cd)](https://www.howtogeek.com/659411/how-to-change-directories-in-command-prompt-on-windows-10) command to where you want to clone the repository.
 
-Click on the `Details` link to see the full output and the errors that need to be fixed:
+- **Type the following command then press "ENTER"**
 
-![gh actions failing checks](../assets/images/gh-actions-rubocop-failing-checks.png)
+  > git@github.com:Mov305/morse_code.git
 
-## [OPTIONAL]Set-up RSpec GitHub Action
+- The terminal will display a message to notify you about your download/cloning process.
 
-You can run your tests with GitHub Actions to ensure that they are passing before merging a PR.
+- **Type the following lists of commands and press "ENTER" after each command:**
 
-To use the GitHub Action to run your tests, please do the following **steps in this order**:
+- **Open folder in VSC**
+    - code .
 
-1. Add a copy of [`.github/workflows/tests.yml`](.github/workflows/tests.yml) to your `.github/workflows` folder.
-    - **Remember** to use the file linked above
-    - Do not modify or delete the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) file that should already be in that folder.
-    - RSpec by default will try to run any file ending in `_spec.rb` inside the `spec` folder. Make sure to follow this convention for your tests files so `rspec` can run your spec files.
-    - You can modify the [`.github/workflows/tests.yml`](.github/workflows/tests.yml) file to better fit your custom needs.
-3. When you open your pull request you should see the result of the GitHub Action:
+  - *Install dependencies locally*  
+    - npm install
 
-![gh actions checks](../assets/images/gh-actions-rspec-tests-checks.png)
+## Built With
 
-Click on the `Details` link of the test action to check the results of your tests.
+- **Ruby**
 
-## Set-up linters in your local env
+## Authors 
 
-### [RuboCop](https://docs.rubocop.org/en/stable/)
+### 👤 Angel Uray
+- GitHub: [@angeluray](https://github.com/angeluray)
+- Twitter: [@atangeluray](https://twitter.com/atangeluray)
+- LinkedIn: [Angel Uray](www.linkedin.com/in/angeluray-jobs)
 
-1. Add this line to the `Gemfile`
-    ```
-    gem 'rubocop', '>= 1.0', '< 2.0'
-    ```
-    *not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html).*
-2. Run `bundle install`.
-3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
-4. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-5. Run `rubocop`.
-6. Fix linter errors.
-7. **IMPORTANT NOTE**: feel free to research [auto-correct options for Rubocop](https://rubocop.readthedocs.io/en/latest/auto_correct/) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+👤 **Abdelrhman Samy Saad**
 
-## Troubleshooting
+- GitHub: [@Mov305](https://github.com/Mov305)
+- Twitter: [@Mov305](https://twitter.com/Mov_abd)
+- LinkedIn: [@Mov305](https://www.linkedin.com/in/abdelrhman-samy-80b14b215/)
 
-- While using Colorize gem, if you are facing errors with Rspec related to 
-    ```bash
-    LoadError:
-    cannot load such file -- colorize
-    ```
-    please remove ```--deployment``` from line no. [26](https://github.com/shubham14p3/Ruby-capstone-project/blob/ca86784cc88bea7c933e329c0953f07e21bcf6ca/.github/workflows/tests.yml#L16) of test.yml file.
+👤 **Armando Comellas**
+
+- GitHub: [@armandocomellas](https://github.com/armandocomellas1)
+- Twitter: [@armando_comellas](https://twitter.com/armando_comellas)
+- LinkedIn: [@armandoComellasd](https://www.linkedin.com/in/armando-comellas-mayo-a8a8b8b6/)
+
+## Acknowledgements ⭐️
+
+- Special thanks to the team for being fully commited on finishing this project together.
+
+## Show your support
+- Give a ⭐️ if you like this project!
+
+## 📝 License
+- This project is [MIT](./LICENSE) licensed.
